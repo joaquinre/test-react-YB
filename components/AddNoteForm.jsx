@@ -13,21 +13,25 @@ function AddNoteForm({ onAdd }) {
   };
   const isButtonDisabled = text.trim() === ''
   return (
+    <div class='flex flex-col'>
+
     <form onSubmit={handleSubmit}>
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        className="border-gray-300 border rounded-lg flex-1 mr-4 px-2 py-1"
-      />
+        class="w-80 border-b-2 border-gray-500 text-black"
+        placeholder="Enter your task here"
+        />
       <button
         type="submit"
-        className={`bg-blue-500 text-white rounded-lg px-4 py-2 ${isButtonDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+        class={`ml-2 border-2 ${isButtonDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
         disabled={isButtonDisabled}
-      >
+        >
         Add
       </button>
     </form>
+        </div>
   );
 }
 

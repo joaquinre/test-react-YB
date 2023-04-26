@@ -36,15 +36,19 @@ export default function Home() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto my-8">
-      <h1 className="text-3xl font-bold mb-8">My Notes</h1>
-      <AddNoteForm onAdd={handleAddNote} />
-      <NoteList
-        notes={notes}
-        onEdit={handleEditNote}
-        onDelete={handleDeleteNote}
-        onCheck={handleCheckNote}
-      />
+    <div class="w-full h-screen bg-gray-100 pt-8">
+      <div class="bg-white p-3 max-w-md mx-auto">
+          <h1 className="text-center text-3xl p-5">My Notes</h1>
+          <div className='mx-auto w-[400px]'>
+            <AddNoteForm onAdd={handleAddNote}/>
+            <NoteList
+              notes={notes}
+              onEdit={handleEditNote}
+              onDelete={handleDeleteNote}
+              onCheck={handleCheckNote}
+            />
+          </div>
+      </div>
     </div>
   );
 }
